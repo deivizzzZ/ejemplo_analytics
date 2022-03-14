@@ -13,6 +13,8 @@ function sendForm() {
     gtag('event', 'form_sent', {'send_to': 'G-ZP7GPD96M8', 'form_name': `${fname} ${lname}`});
 }
 
-document.querySelector(".contact").addEventListener('click', () => {
-    gtag('event', 'contact_page_visited', {'send_to': 'G-ZP7GPD96M8', 'contact_visited': true});
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener('click', () => {
+        gtag('event', 'link_clicked', {'send_to': 'G-ZP7GPD96M8', 'link_visited': link.innerText});
+    });
 });
