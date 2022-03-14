@@ -10,7 +10,7 @@
         gtag('js', new Date());
         
         gtag('config', 'UA-222598052-1', {
-            'custom_map': {'dimension1': 'page_type'},
+            'custom_map': {'dimension1': 'page_type', 'dimension2': 'clicks_number'},
             'page_type': 'home'
         });
         gtag('config', 'G-ZP7GPD96M8', {
@@ -34,7 +34,9 @@
             <h3>Estos botones hacen cosas</h3>
             <div class="counter">
                 <button onclick="increaseCounter()">Haz click</button>
-                <p>Número de clicks: 0</p>
+                <label for="clicks-number">Número de clicks:</label>
+                <input type="text" id="clicks-number">
+                <button onclick="sendClicks()"></button>
             </div>
         </div>
         <div class="data-sent">

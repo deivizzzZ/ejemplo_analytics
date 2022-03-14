@@ -1,7 +1,10 @@
 let clicksCounter = 0;
 function increaseCounter() {
     clicksCounter++;
-    document.querySelector(".counter p").innerText = `Número de clicks: ${clicksCounter}`;
+    document.getElementById("clicks-number").value = clicksCounter;
+}
+function sendClicks() {
+    gtag('event', 'clicks_sent', {'clicks_number': clicksCounter});
 }
 
 function sendForm() {
