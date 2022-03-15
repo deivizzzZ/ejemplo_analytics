@@ -4,17 +4,19 @@ function increaseCounter() {
     document.getElementById("clicks-number").value = clicksCounter;
 }
 function sendClicks() {
-    // gtag('event', 'clicks_sent', {'clicks_number': clicksCounter});
+    gtag('event', 'clicks_sent', {
+        'clicks_number': document.getElementById("clicks-number").value
+    });
 }
 
 function sendForm() {
     const fname = document.getElementById("fname").value;
     const lname = document.getElementById("lname").value;
-    // gtag('event', 'form_sent', {'form_name': `${fname} ${lname}`});
+    gtag('event', 'form_sent', {'form_name': `${fname} ${lname}`});
 }
 
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener('click', () => {
-        // gtag('event', 'link_clicked', {'link_visited': link.innerText});
+        gtag('event', 'link_clicked', {'link_visited': link.innerText});
     });
 });
