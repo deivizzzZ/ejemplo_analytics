@@ -15,6 +15,12 @@
             'dimension3': 'link_visited'
         }
     });
+    /*
+    UA no nos permite reutilizar la etiqueta existente para la nueva propiedad de GA4
+    Parece no reconocer gtag.js y descarga por defecto analytics.js
+    Por el momento añadimos la etiqueta de GA4
+    */
+    gtag('config', 'G-G49H41YHZC');
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
